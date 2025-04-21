@@ -1,0 +1,25 @@
+@mixin h5{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 110.00000000000001%;
+}   
+
+@mixin m{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+@mixin h1{
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 110.00000000000001%;
+}
+
+@mixin mybtn{
+    cursor: pointer;
+    color: $white;
+    background-color: $Rose-700;
+    border-radius: 5px;
+    border: none;
+}

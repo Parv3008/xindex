@@ -1,0 +1,52 @@
+@import '_color';
+@import '_mixin';
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Roboto", sans-serif;}
+
+html , body{height: 100%; width: 100%;}
+
+.container{max-width: 1280px !important; padding: 0 0 !important;}
+
+.container1{padding-left: 80px !important;}
+
+img{max-width: 100%; height: auto;}
+
+a{text-decoration: none !important;}
+
+ul{padding-left: 0px;}
+
+li{list-style: none;}
+
+header{background-color: $Rose-900;}
+
+.navbar{padding: 24px 0 !important;}
+
+.logo{@include h5; color: $white;} 
+
+.nav-link{@include m; color: $white !important; }
+
+.join{border: 2px solid $white !important; border-radius: 5px; padding: 12px 28px !important;}
+
+.offcanvas-body{ul{gap: 16px;}}
+
+.navbar-toggler{border: none !important;}
+
+.navbar-toggler-icon {background-image: url("/src/assests/menu.svg") !important;}
+
+.navbar-toggler:hover {background-color: $white; transition: 0.4s ease;}
+
+.navbar-toggler:focus {box-shadow: none !important;}
+
+.hero-section{background-color: $Rose-900; padding-top: 32px;} 
+
+.hero-row{
+    h1{@include h1; color: $white;}
+    input{border-radius: 5px; padding: 12px 16px; width: 515px;}
+    button{@include mybtn; @include m; padding: 12px 28px;}
+    a{border: 1px solid $white; border-radius: 4px; padding: 2px 8px; color: $white;}
+}
+
+@media (min-width:320px) and (max-width:767px){
+    .nav-link{@include m; color: black !important;}
+    .join{border: 2px solid black !important; border-radius: 5px; padding: 12px 28px !important;}
+}
