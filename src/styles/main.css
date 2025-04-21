@@ -97,9 +97,15 @@ header {
   color: white;
 }
 .hero-row input {
-  border-radius: 5px;
-  padding: 12px 16px;
   width: 515px;
+  border-radius: 5px;
+  padding: 13px 16px 13px 48px;
+  color: #697077;
+  background-image: url("/src/assests/search-icon.svg");
+  background-position: 12px 16px;
+  background-repeat: no-repeat;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 .hero-row button {
   cursor: pointer;
@@ -112,11 +118,20 @@ header {
   line-height: 24px;
   padding: 12px 28px;
 }
+.hero-row .search-link {
+  display: flex;
+  gap: 8px;
+}
 .hero-row a {
   border: 1px solid white;
   border-radius: 4px;
   padding: 2px 8px;
   color: white;
+}
+
+.company-logo {
+  padding: 48px 80px;
+  background-color: #F1F5F9;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -130,5 +145,12 @@ header {
     border: 2px solid black !important;
     border-radius: 5px;
     padding: 12px 28px !important;
+  }
+  .hero-row h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .logo-img {
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=main.css.map */

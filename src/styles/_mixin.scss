@@ -16,6 +16,11 @@
     line-height: 110.00000000000001%;
 }
 
+@mixin h4{
+    font-size: 40px;
+    font-weight: 700;
+}
+
 @mixin mybtn{
     cursor: pointer;
     color: $white;
