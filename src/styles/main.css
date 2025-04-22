@@ -14,8 +14,11 @@ html, body {
   max-width: 1280px !important;
 }
 
-.container1 {
-  padding-left: 80px !important;
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 90px;
 }
 
 a {
@@ -91,6 +94,7 @@ header {
   color: white;
 }
 .hero-row input {
+  width: 515px;
   border-radius: 5px;
   padding: 13px 16px 13px 48px;
   color: #697077;
@@ -123,11 +127,6 @@ header {
   padding: 2px 8px;
   color: white;
   white-space: nowrap;
-}
-
-.right-img img {
-  max-width: 100%;
-  height: auto;
 }
 
 .company-logo {
@@ -229,7 +228,58 @@ header {
   margin-bottom: 0;
 }
 
+.slick1 {
+  max-width: 1440px;
+  padding-left: 112px;
+}
+
+.slick-next:before {
+  position: absolute;
+  left: -95px;
+  content: url("../assets/chevron-right.svg") !important;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -8px;
+}
+
+.services {
+  padding: 80px 0;
+}
+.services h4 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.services button {
+  cursor: pointer;
+  color: white;
+  background-color: #BE123C;
+  border-radius: 5px;
+  border: none;
+  padding: 16px 32px;
+}
+
+.services-img {
+  padding: 80px 0;
+  flex-wrap: wrap;
+}
+.services-img h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110%;
+  color: #0F172A;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
+  .hero-wrapper {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .hero-wrapper .right-img img {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+  }
   .nav-link {
     font-size: 16px;
     font-weight: 500;
@@ -244,6 +294,12 @@ header {
   .hero-row h1 {
     font-size: 40px;
     font-weight: 700;
+  }
+  .hero-row input {
+    max-width: 236px;
+    background-image: none;
+    padding: 13px 22px 13px 16px;
+    text-overflow: ellipsis;
   }
   .left {
     padding-bottom: 32px;
@@ -266,6 +322,7 @@ header {
     font-weight: 700;
     line-height: 110%;
     color: #0F172A;
+    padding-bottom: 8px;
   }
   .feature-text a {
     font-size: 16px;
@@ -276,5 +333,47 @@ header {
   .art {
     overflow-x: scroll;
     gap: 24px;
+  }
+  .slider1 {
+    padding: 48px 0;
+  }
+  .masterpiece-text {
+    flex-wrap: wrap;
+  }
+  .masterpiece-text h4 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 110%;
+    color: #0F172A;
+    padding-bottom: 8px;
+  }
+  .masterpiece-text a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #2563EB;
+    padding-right: 16px;
+  }
+  .slick1 {
+    padding-left: 16px;
+  }
+  .services {
+    padding: 48px 0;
+  }
+  .services h4 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .services button {
+    cursor: pointer;
+    color: white;
+    background-color: #BE123C;
+    border-radius: 5px;
+    border: none;
+    padding: 16px 32px;
+  }
+  .services-img {
+    padding: 48px 0;
+    row-gap: 48px;
   }
 }/*# sourceMappingURL=main.css.map */
