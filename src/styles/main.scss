@@ -5,11 +5,11 @@
 
 html , body{height: 100%; width: 100%;}
 
-.container{max-width: 1280px !important; padding: 0 0 !important;}
+.container{max-width: 1280px !important;}
 
 .container1{padding-left: 80px !important;}
 
-img{max-width: 100%; height: auto;}
+// img{max-width: 100%; height: auto;}
 
 a{text-decoration: none !important;}
 
@@ -37,24 +37,69 @@ header{background-color: $Rose-900;}
 
 .navbar-toggler:focus {box-shadow: none !important;}
 
-.hero-section{background-color: $Rose-900; padding-top: 32px;} 
+.hero-section{background-color: $Rose-900; padding-top: 32px + 99.2px; } 
 
 .hero-row{
     h1{@include h1; color: $white;}
     input{border-radius: 5px; padding: 13px 16px 13px 48px; color: $Blue-Gray-600; background-image: url("../assets/search-icon.svg"); background-position: 12px 16px; background-repeat: no-repeat; margin-top: 24px; margin-bottom: 8px;}
     button{@include mybtn; @include m; padding: 12px 28px;}
-    .search-link{display: flex; gap: 8px;}
-    a{border: 1px solid $white; border-radius: 4px; padding: 2px 8px; color: $white;}
+    .search-link{display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 8px;}
+    a{border: 1px solid $white; border-radius: 4px; padding: 2px 8px; color: $white; white-space: nowrap; }
 }
 
-.company-logo{padding: 48px 80px; background-color: $Blue-Gray-100;}
+.right-img{img{max-width: 100%; height: auto;}}
+
+.company-logo{padding: 48px 0; background-color: $Blue-Gray-100;}
+
+.logo-img{flex-wrap: wrap;}
+
+.Feature-art{padding: 80px 0;}
+
+.feature-text{
+    padding-bottom: 26px;
+    h4{@include h4; color: $Blue-Gray-900;}
+    a{@include m; color: $Blue-600; padding-right: 16px;}
+}
+
+.art-img{
+    position: relative;
+    span{@include m; color: $white; position: absolute; top: 24px; left: 24px;}
+    h6{@include h6; color: $white; position: absolute; top: 46px; left: 24px;}
+}
+
+.slider1{padding: 80px 0; background-color: $Blue-Gray-100;}
+
+.masterpiece-text{
+    padding-bottom: 24px;
+    h4{@include h4; color: $Blue-Gray-900;}
+    a{@include m; color: $Blue-600; padding-right: 16px;}
+}
+
+.slider-card-img{img{border-radius: 10px 10px 0 0;}}
+
+.slider-card-text{
+    width: 300px;padding: 16px; background-color: $white; border-radius: 0 0 10px 10px;
+    img{padding-right: 8px;}
+    h5{@include m; color: $Blue-Gray-900; margin-bottom: 0;}
+    h6{@include s; color: $Blue-Gray-600; margin-bottom: 0;} 
+}
 
 @media (min-width:320px) and (max-width:767px){
     .nav-link{@include m; color: black !important;}
     .join{border: 2px solid black !important; border-radius: 5px; padding: 12px 28px !important;}
     .hero-row{
-        h1{@include h4;}
-        
+        h1{@include h4;}  
     }
-    .logo-img{flex-wrap: wrap;}
+    .left{padding-bottom: 32px;}
+    .logo-img {gap: 32px;}
+    .company-logo{padding-bottom: 48px - 24px;}
+    .Feature-art{padding: 48px 0;}
+    .feature-text{
+        padding-bottom: 32px;
+        flex-wrap: wrap;
+        h4{@include h5; color: $Blue-Gray-900;}
+        a{@include m; color: $Blue-600;}
+    }
+    .art{overflow-x: scroll; gap: 24px;}
+    
 }

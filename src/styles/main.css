@@ -12,16 +12,10 @@ html, body {
 
 .container {
   max-width: 1280px !important;
-  padding: 0 0 !important;
 }
 
 .container1 {
   padding-left: 80px !important;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 a {
@@ -87,7 +81,7 @@ header {
 
 .hero-section {
   background-color: #881337;
-  padding-top: 32px;
+  padding-top: 131.2px;
 }
 
 .hero-row h1 {
@@ -119,6 +113,8 @@ header {
 }
 .hero-row .search-link {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 8px;
 }
 .hero-row a {
@@ -126,11 +122,111 @@ header {
   border-radius: 4px;
   padding: 2px 8px;
   color: white;
+  white-space: nowrap;
+}
+
+.right-img img {
+  max-width: 100%;
+  height: auto;
 }
 
 .company-logo {
-  padding: 48px 80px;
+  padding: 48px 0;
   background-color: #F1F5F9;
+}
+
+.logo-img {
+  flex-wrap: wrap;
+}
+
+.Feature-art {
+  padding: 80px 0;
+}
+
+.feature-text {
+  padding-bottom: 26px;
+}
+.feature-text h4 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0F172A;
+}
+.feature-text a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #2563EB;
+  padding-right: 16px;
+}
+
+.art-img {
+  position: relative;
+}
+.art-img span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.art-img h6 {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  top: 46px;
+  left: 24px;
+}
+
+.slider1 {
+  padding: 80px 0;
+  background-color: #F1F5F9;
+}
+
+.masterpiece-text {
+  padding-bottom: 24px;
+}
+.masterpiece-text h4 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0F172A;
+}
+.masterpiece-text a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #2563EB;
+  padding-right: 16px;
+}
+
+.slider-card-img img {
+  border-radius: 10px 10px 0 0;
+}
+
+.slider-card-text {
+  width: 300px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+.slider-card-text img {
+  padding-right: 8px;
+}
+.slider-card-text h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #0F172A;
+  margin-bottom: 0;
+}
+.slider-card-text h6 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #697077;
+  margin-bottom: 0;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -149,7 +245,36 @@ header {
     font-size: 40px;
     font-weight: 700;
   }
+  .left {
+    padding-bottom: 32px;
+  }
   .logo-img {
+    gap: 32px;
+  }
+  .company-logo {
+    padding-bottom: 24px;
+  }
+  .Feature-art {
+    padding: 48px 0;
+  }
+  .feature-text {
+    padding-bottom: 32px;
     flex-wrap: wrap;
+  }
+  .feature-text h4 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 110%;
+    color: #0F172A;
+  }
+  .feature-text a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #2563EB;
+  }
+  .art {
+    overflow-x: scroll;
+    gap: 24px;
   }
 }/*# sourceMappingURL=main.css.map */

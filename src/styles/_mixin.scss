@@ -21,10 +21,21 @@
     font-weight: 700;
 }
 
+@mixin h6{
+    font-size: 24px;
+    font-weight: 700;
+}
+
 @mixin mybtn{
     cursor: pointer;
     color: $white;
     background-color: $Rose-700;
     border-radius: 5px;
     border: none;
+}
+
+@mixin s{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; 
 }
