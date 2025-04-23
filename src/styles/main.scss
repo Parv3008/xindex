@@ -9,13 +9,6 @@ html , body{height: 100%; width: 100%;}
 
 // img{max-width: 100%; height: auto;}
 
-.hero-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 90px;
-}
-
 a{text-decoration: none !important;}
 
 ul{padding-left: 0px;}
@@ -42,10 +35,9 @@ header{background-color: $Rose-900;}
 
 .navbar-toggler:focus {box-shadow: none !important;}
 
-.hero-section{background-color: $Rose-900; padding-top: 32px + 99.2px;} 
+.hero-section{background-color: $Rose-900; padding-top: 32px + 99.2px; position: relative;} 
 
 .hero-row{
-    
     h1{@include h1; color: $white;}
     input{width: 515px; border-radius: 5px; padding: 13px 16px 13px 48px; color: $Blue-Gray-600; background-image: url("../assets/search-icon.svg"); background-position: 12px 16px; background-repeat: no-repeat; margin-top: 24px; margin-bottom: 8px;}
     button{@include mybtn; @include m; padding: 12px 28px;}
@@ -53,7 +45,11 @@ header{background-color: $Rose-900;}
     a{border: 1px solid $white; border-radius: 4px; padding: 2px 8px; color: $white; white-space: nowrap; }
 }
 
-// .right-img{img{max-width: 100%; height: auto;}}
+.left{padding: 129px 0;}
+
+.right-img{
+    img{position: absolute; max-width: 100%; height: auto; right: auto; top: 20%;}
+}
 
 .company-logo{padding: 48px 0; background-color: $Blue-Gray-100;}
 
@@ -81,6 +77,8 @@ header{background-color: $Rose-900;}
     a{@include m; color: $Blue-600; padding-right: 16px;}
 }
 
+.slick-list{padding:0 7% 0 0 !important; width  : 110%;}
+
 .slider-card-img{img{border-radius: 10px 10px 0 0;}}
 
 .slider-card-text{
@@ -90,11 +88,9 @@ header{background-color: $Rose-900;}
     h6{@include s; color: $Blue-Gray-600; margin-bottom: 0;} 
 }
 
-.slick1{max-width: 1440px; padding-left: 112px;}
-
 .slick-next:before {
     position: absolute;
-    left: -95px;
+    left: 20px;
     content: url("../assets/chevron-right.svg") !important;
     padding: 10px;
     background-color: #fff;
@@ -111,18 +107,17 @@ header{background-color: $Rose-900;}
 }
 
 @media (min-width:320px) and (max-width:767px){
-    .hero-wrapper{
-        flex-direction: column;
-        padding-left: 0;
-        .right-img{img{text-align: center; max-width: 100%; height: auto;}}
-    }
     .nav-link{@include m; color: black !important;}
     .join{border: 2px solid black !important; border-radius: 5px; padding: 12px 28px !important;}
     .hero-row{
         h1{@include h4;}
         input{max-width: 236px; background-image: none; padding: 13px 22px 13px 16px; text-overflow: ellipsis;}  
     }
+    .hero-section{padding-top: 0;}
     .left{padding-bottom: 32px;}
+    .right-img{
+        img{position: static; max-width: 100%; height: auto;    }
+    }
     .logo-img {gap: 32px;}
     .company-logo{padding-bottom: 48px - 24px;}
     .Feature-art{padding: 48px 0;}
@@ -139,7 +134,6 @@ header{background-color: $Rose-900;}
         h4{@include h5; color: $Blue-Gray-900; padding-bottom: 8px;}
         a{@include m; color: $Blue-600; padding-right: 16px;}
     }
-    .slick1{padding-left: 16px;}
     .services{padding: 48px 0; h4{@include h4;} button{@include mybtn; padding: 16px 32px;}}
     .services-img{padding: 48px 0; row-gap: 48px;}
 }
