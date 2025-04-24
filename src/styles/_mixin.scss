@@ -74,3 +74,10 @@
     line-height: 110.00000000000001%;
     margin-bottom: 0px;
 }
+
+@mixin xs{
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    line-height: 140%;
+}

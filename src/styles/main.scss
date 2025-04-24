@@ -114,9 +114,11 @@ header{background-color: $Rose-900;}
 .solution-row{
     h2{@include h2; color: $white;}
     p{@include l; color: $white; padding: 24px 0;}
-    li{color: $white; img{padding-right: 8px;}}
+    li{@include l;color: $white; img{padding-right: 8px;}}
     button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-600; margin-top: 24px;}
 }
+
+.solution-img{img{max-width: 100%; height: auto;}}
 
 .slider2{padding: 80px 0; background-color: $Blue-Gray-100;}
 
@@ -128,6 +130,7 @@ header{background-color: $Rose-900;}
     width: 100%;
     max-width: 576px;
     max-height: 384px;
+    z-index: 1;
 }
 
 .custom-video {
@@ -140,8 +143,8 @@ header{background-color: $Rose-900;}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    width: 144px;
+    height: 144px;
     background: url("../assets/play-icon.svg") no-repeat center center;
     background-size: contain;
     cursor: pointer;
@@ -158,24 +161,43 @@ header{background-color: $Rose-900;}
     p{@include xxl; color: $Blue-Gray-900;}
 }
 
+.slick2-wrapper{
+    position: relative;
+    .slick-prev:before{
+        position: absolute;
+        content: url("../assets/chevron-left.svg") !important;
+        padding: 12px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        z-index: 1000;
+        
+    }
+    .slick-next:before{
+        position: absolute;
+        content: url("../assets/chevron-right.svg") !important;
+        padding: 12px;
+        background-color: #ffffff;
+        border-radius: 50%;
+    }
+}
+
 .slider3{padding: 80px 0; background-color: $Blue-Gray-600;}
 
 .slider3-text{
     h2{@include h2; color: $white;}
     p{@include l; color: $white; padding: 24px 0;}
-    button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-600; margin-top: 24px;}
+    button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-600; }
 }
 
 .slick3-card {
-    height: 100%; // ensure same height
+    height: 100%; 
     background: white;
     border-radius: 10px;
-    overflow: hidden;
     transition: all 0.3s ease;
-    width: 184px; // default width for side slides
+    width: 184px; 
 
     &.slick-center {
-        width: 384px !important; // wider center slide
+        width: 384px !important; 
     }
 
     .slider3-img {
@@ -219,8 +241,62 @@ header{background-color: $Rose-900;}
     }
 }
 
+.art{padding: 80px 0;}
 
+.art-text{
+    padding-bottom: 26px;
+    h4{@include h4; color: $Blue-Gray-900;}
+    a{@include m; color: $Blue-600;
+        img{padding-left: 16px;}
+    }
+}
 
+.art-card-img {
+    position: relative;
+    display: inline-block;
+    img{max-width: 100%; height: auto; border-radius: 5px;}
+  }
+  
+  .feature {
+    @include s;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: $Purple-100; 
+    color: $Purple-800;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+.art-card-text{
+    h6{@include h6; color: $Blue-Gray-900; padding-top: 24px; padding-bottom: 8px;}
+    p{@include l; color: $Blue-Gray-900;}
+}
+
+.join-now{padding-top: 80px; background-color: $Blue-Gray-900; color: $white;}
+
+.join-text{
+    h2{@include h2;}
+    button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-900; margin-top: 24px;}
+}
+
+.join-img{
+    img{max-width: 100%; height: auto;}
+}
+
+.footer-row{
+    padding: 48px 0; color: $Blue-Gray-600;
+    li{@include m;
+        img{padding-right: 8px; max-width: 100%; height: auto;}}
+}
+
+.footer-bottom{
+    padding-top: 48px; padding-bottom: 24px;
+    span{@include m;}
+    .social-logo{gap: 16px!important;}
+}
+
+.footer-p{@include xs; padding-top: 24px; padding-bottom: 48px;}
 
 
 @media (min-width:320px) and (max-width:767px){
@@ -246,8 +322,20 @@ header{background-color: $Rose-900;}
     }
     .art{overflow-x: scroll; gap: 24px;} 
     .slider1{padding: 48px 0;}
-    .slick-list{padding:0% 15% 0% 0% !important; width: 100%;}
+    // .slick-list{padding:0% 15% 0% 0% !important;}
 
+    .slick1-wrapper{
+        .slick-list{padding:0 20% 0 0 !important;}
+        width: calc(5% - (50% - 615px));
+        margin-left: auto;
+        .slick-next:before {
+            position: absolute;
+            content: url("../assets/chevron-right.svg") !important;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+    }
     .masterpiece-text{
         flex-wrap: wrap;
         h4{@include h5; color: $Blue-Gray-900; padding-bottom: 8px;}
@@ -255,4 +343,34 @@ header{background-color: $Rose-900;}
     }
     .services{padding: 48px 0; h4{@include h4;} button{@include mybtn; padding: 16px 32px;}}
     .services-img{padding: 48px 0; row-gap: 48px;}
+    .Solutions{padding: 48px 0;}
+    .solution-row{
+        flex-direction: column-reverse;
+        h2{@include h5; padding-top: 32px;}
+        p{@include m; padding: 24px 0;}
+        li{@include m;}
+    }
+    .slider2{padding: 48px 0;}
+    .slider2-card{flex-direction: column; gap: 0px;
+        h6{padding-top: 32px;}
+        p{@include m; font-weight: 400;}
+    }
+    .slider3{padding: 48px 0;}
+    .slider3-text{
+        h2{@include h5;}
+        p{@include m; padding: 16px 0; font-weight: 400;}
+        button{margin-bottom: 53.5px;}
+    }
+    // .slick3-wrapper{
+    //     .slick-list{padding:0 15% 0 0 !important;}
+    // }
+    .art{padding: 48px 0;}
+    .art-text{
+        padding-bottom: 26px; flex-wrap: wrap;
+        h4{@include h4; color: $Blue-Gray-900;}
+        a{@include m; color: $Blue-600;
+            img{padding-left: 16px;}
+        }
+    }
+
 }
