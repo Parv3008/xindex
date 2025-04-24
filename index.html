@@ -152,6 +152,8 @@
                         <img src="src/assets/arrow-right.svg" alt="">
                     </div>
                 </div>
+            </div>
+            <div class="slick1-wrapper">
                 <div class="slick1">
                     <div class="slider-card">
                         <div class="slider-card-img"><img src="src/assets/slider1-img1.jpg" alt=""></div>
@@ -213,9 +215,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </section>
@@ -253,6 +252,119 @@
             </div>
         </section>
 
+        <section class="Solutions">
+            <div class="container">
+                <div class="row solution-row">
+                    <div class="col-lg-6">
+                        <h2>Best solutions for your demanding collection</h2>
+                        <p>Odio vulputate cras vel lacinia turpis volutpat adipiscing. Sollicitudin at velit, blandit
+                            tempus nunc in.</p>
+                        <ul>
+                            <li><img src="src/assets/check.svg" alt="">Interdum volutpat turpis malesuada ac turpis.
+                            </li>
+                            <li><img src="src/assets/check.svg" alt="">Tortor ipsum pretium quis nunc.</li>
+                            <li><img src="src/assets/check.svg" alt="">Vitae odio a id purus in.</li>
+                        </ul>
+                        <button>Explore Xinder</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="src/assets/Col.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider2">
+            <div class="container">
+                <div class="slick2-wrapper">
+                    <div class="slick2">
+                        <div class="slider2-card d-flex justify-content-between align-items-center">
+                            <div class="video-container">
+                                <video src="src/assets/video.mp4" class="custom-video"></video>
+                                <div class="custom-play-button"></div>
+                            </div>
+                            <div>
+                                <h6>Marie Poirot, Co-Founder <span>Art-Gal</span></h6>
+                                <p>“Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu mattis est velit in.
+                                    Nibh in purus sit convallis phasellus ut. Neque suspendisse a habitasse commodo.”
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slider2-card d-flex justify-content-between align-items-center">
+                            <div class="video-container">
+                                <video src="src/assets/video.mp4" class="custom-video"></video>
+                                <div class="custom-play-button"></div>
+                            </div>
+                            <div>
+                                <h6>Marie Poirot, Co-Founder <span>Art-Gal</span></h6>
+                                <p>“Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu mattis est velit in.
+                                    Nibh in purus sit convallis phasellus ut. Neque suspendisse a habitasse commodo.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="slider3-text">
+                            <h2>Be incredible</h2>
+                            <p>Nec ultricies eget placerat ultricies eleifend dignissim aliquet sapien. Senectus
+                                vestibulum, eget erat at et congue cursus pretium.</p>
+                            <button>Explore Xinder</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="slick3-wrapper">
+                            <div class="slick3">
+                                <div class="slick3-card">
+                                    <div class="slider3-img">
+                                        <img src="src/assets/slider3-img1.png" alt="">
+                                    </div>
+                                    <div class="slick3-text">
+                                        <img src="src/assets/silder3-user1.png" alt="">
+                                        <span>Colorful Face</span>
+                                    </div>
+                                </div>
+                                <div class="slick3-card">
+                                    <div class="slider3-img">
+                                        <img src="src/assets/slider3-img1.png" alt="">
+                                    </div>
+                                    <div class="slick3-text">
+                                        <img src="src/assets/silder3-user1.png" alt="">
+                                        <span>Colorful Face</span>
+                                    </div>
+                                </div>
+                                <div class="slick3-card">
+                                    <div class="slider3-img">
+                                        <img src="src/assets/slider3-img1.png" alt="">
+                                    </div>
+                                    <div class="slick3-text">
+                                        <img src="src/assets/silder3-user1.png" alt="">
+                                        <span>Colorful Face</span>
+                                    </div>
+                                </div>
+                                <div class="slick3-card">
+                                    <div class="slider3-img">
+                                        <img src="src/assets/slider3-img1.png" alt="">
+                                    </div>
+                                    <div class="slick3-text">
+                                        <img src="src/assets/silder3-user1.png" alt="">
+                                        <span>Colorful Face</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -274,6 +386,25 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
     <script>
+        document.querySelectorAll('.video-container').forEach(container => {
+            const video = container.querySelector('.custom-video');
+            const playButton = container.querySelector('.custom-play-button');
+
+            playButton.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playButton.style.display = 'none'; // Hide the play button when the video starts playing
+                }
+            });
+
+            video.addEventListener('pause', () => {
+                playButton.style.display = 'block'; // Show the play button when the video is paused
+            });
+
+            video.addEventListener('ended', () => {
+                playButton.style.display = 'block'; // Show the play button when the video ends
+            });
+        });
         $('.slick1').slick({
             dots: false,
             infinite: true,
@@ -282,8 +413,7 @@
             slidesToScroll: 1,
             autoplay: false,
             autoplaySpeed: 5000,
-            arrows: true,
-            // centerMode: true,
+            arrows: false,
             responsive: [
                 {
                     breakpoint: 1024,
@@ -318,6 +448,81 @@
                 // instead of a settings object
             ]
         });
+        $('.slick2').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        // centerMode: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        // centerMode: true,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        // centerMode: true,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        $('.slick3').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3, // keep this 1 when using variableWidth
+            slidesToScroll: 1,
+            variableWidth: true,
+            centerMode: true,
+            arrows: true,
+            autoplay: false,
+            // centerPadding: '10px',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        variableWidth: true,
+                        centerMode: true,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        variableWidth: true,
+                        centerMode: true,
+                        arrows: false
+                    }
+                }
+            ]
+        });
+
+
     </script>
 </body>
 

@@ -19,7 +19,8 @@ a {
 }
 
 ul {
-  padding-left: 0px;
+  padding-left: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 li {
@@ -38,6 +39,7 @@ header {
   font-size: 32px;
   font-weight: 700;
   line-height: 110%;
+  margin-bottom: 0px;
   color: white;
 }
 
@@ -45,6 +47,7 @@ header {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 0px;
   color: white !important;
 }
 
@@ -85,6 +88,7 @@ header {
   font-size: 72px;
   font-weight: 800;
   line-height: 110%;
+  margin-bottom: 0px;
   color: white;
 }
 .hero-row input {
@@ -104,9 +108,11 @@ header {
   background-color: #BE123C;
   border-radius: 5px;
   border: none;
+  margin-bottom: 0px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 0px;
   padding: 12px 28px;
 }
 .hero-row .search-link {
@@ -131,7 +137,7 @@ header {
   position: absolute;
   max-width: 100%;
   height: auto;
-  right: auto;
+  right: 0%;
   top: 20%;
 }
 
@@ -154,12 +160,14 @@ header {
 .feature-text h4 {
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: 0px;
   color: #0F172A;
 }
 .feature-text a {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 0px;
   color: #2563EB;
   padding-right: 16px;
 }
@@ -171,6 +179,7 @@ header {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 0px;
   color: white;
   position: absolute;
   top: 24px;
@@ -179,6 +188,7 @@ header {
 .art-img h6 {
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 0px;
   color: white;
   position: absolute;
   top: 46px;
@@ -196,19 +206,31 @@ header {
 .masterpiece-text h4 {
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: 0px;
   color: #0F172A;
 }
 .masterpiece-text a {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 0px;
   color: #2563EB;
   padding-right: 16px;
 }
 
-.slick-list {
+.slick1-wrapper {
+  width: calc(100% - (50% - 630px));
+  margin-left: auto;
+}
+.slick1-wrapper .slick-list {
   padding: 0 7% 0 0 !important;
-  width: 110%;
+}
+.slick1-wrapper .slick-next:before {
+  position: absolute;
+  content: url("../assets/chevron-right.svg") !important;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .slider-card-img img {
@@ -228,6 +250,7 @@ header {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 0px;
   color: #0F172A;
   margin-bottom: 0;
 }
@@ -235,18 +258,9 @@ header {
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
+  margin-bottom: 0px;
   color: #697077;
   margin-bottom: 0;
-}
-
-.slick-next:before {
-  position: absolute;
-  left: 20px;
-  content: url("../assets/chevron-right.svg") !important;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: -8px;
 }
 
 .services {
@@ -255,6 +269,7 @@ header {
 .services h4 {
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: 0px;
 }
 .services button {
   cursor: pointer;
@@ -262,6 +277,7 @@ header {
   background-color: #BE123C;
   border-radius: 5px;
   border: none;
+  margin-bottom: 0px;
   padding: 16px 32px;
 }
 
@@ -273,7 +289,179 @@ header {
   font-size: 20px;
   font-weight: 500;
   line-height: 110%;
+  margin-bottom: 0px;
   color: #0F172A;
+}
+
+.Solutions {
+  padding: 80px 0;
+  background-color: #697077;
+}
+
+.solution-row h2 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 0px;
+  color: white;
+}
+.solution-row p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 0px;
+  color: white;
+  padding: 24px 0;
+}
+.solution-row li {
+  color: white;
+}
+.solution-row li img {
+  padding-right: 8px;
+}
+.solution-row button {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 0px;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: #697077;
+  margin-top: 24px;
+}
+
+.slider2 {
+  padding: 80px 0;
+  background-color: #F1F5F9;
+}
+
+.slider2-card {
+  gap: 80px;
+}
+.slider2-card .video-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 576px;
+  max-height: 384px;
+}
+.slider2-card .custom-video {
+  width: 100%;
+  border-radius: 10px;
+}
+.slider2-card .custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: url("../assets/play-icon.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.slider2-card .custom-play-button:hover {
+  opacity: 1;
+}
+.slider2-card h6 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110%;
+  margin-bottom: 0px;
+  color: #697077;
+  padding-bottom: 16px;
+}
+.slider2-card span {
+  color: #2563EB;
+}
+.slider2-card p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 0px;
+  color: #0F172A;
+}
+
+.slider3 {
+  padding: 80px 0;
+  background-color: #697077;
+}
+
+.slider3-text h2 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 0px;
+  color: white;
+}
+.slider3-text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 0px;
+  color: white;
+  padding: 24px 0;
+}
+.slider3-text button {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 0px;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: #697077;
+  margin-top: 24px;
+}
+
+.slick3-card {
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 184px;
+}
+.slick3-card.slick-center {
+  width: 384px !important;
+}
+.slick3-card .slider3-img img {
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slick3-card .slick3-text {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 16px;
+  border-radius: 0 0 10px 10px;
+}
+.slick3-card .slick3-text span {
+  padding-left: 8px;
+  color: #0F172A;
+}
+
+.slick3-wrapper .slick-slide {
+  display: inline-block !important;
+  height: auto;
+}
+.slick3-wrapper .slick3 .slick-slide {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+.slick3-wrapper .slick3 .slick-center {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -281,6 +469,7 @@ header {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    margin-bottom: 0px;
     color: black !important;
   }
   .join {
@@ -291,6 +480,7 @@ header {
   .hero-row h1 {
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 0px;
   }
   .hero-row input {
     max-width: 236px;
@@ -326,6 +516,7 @@ header {
     font-size: 32px;
     font-weight: 700;
     line-height: 110%;
+    margin-bottom: 0px;
     color: #0F172A;
     padding-bottom: 8px;
   }
@@ -333,6 +524,7 @@ header {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    margin-bottom: 0px;
     color: #2563EB;
   }
   .art {
@@ -353,6 +545,7 @@ header {
     font-size: 32px;
     font-weight: 700;
     line-height: 110%;
+    margin-bottom: 0px;
     color: #0F172A;
     padding-bottom: 8px;
   }
@@ -360,6 +553,7 @@ header {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    margin-bottom: 0px;
     color: #2563EB;
     padding-right: 16px;
   }
@@ -369,6 +563,7 @@ header {
   .services h4 {
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 0px;
   }
   .services button {
     cursor: pointer;
@@ -376,6 +571,7 @@ header {
     background-color: #BE123C;
     border-radius: 5px;
     border: none;
+    margin-bottom: 0px;
     padding: 16px 32px;
   }
   .services-img {
