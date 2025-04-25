@@ -57,6 +57,11 @@ header {
   padding: 12px 28px !important;
 }
 
+.join:hover {
+  background-color: #BE123C;
+  transition: 0.4s ease;
+}
+
 .offcanvas-body ul {
   gap: 16px;
 }
@@ -113,7 +118,11 @@ header {
   font-weight: 500;
   line-height: 24px;
   margin-bottom: 0px;
-  padding: 12px 28px;
+  padding: 13px 28px;
+}
+.hero-row button:hover {
+  background-color: rgba(255, 4, 4, 0.9098039216);
+  transition: 0.4s ease;
 }
 .hero-row .search-link {
   display: flex;
@@ -138,7 +147,7 @@ header {
   max-width: 100%;
   height: auto;
   right: 0%;
-  top: 20%;
+  top: 19%;
 }
 
 .company-logo {
@@ -280,6 +289,10 @@ header {
   margin-bottom: 0px;
   padding: 16px 32px;
 }
+.services button:hover {
+  background-color: #881337;
+  transition: 0.4s ease;
+}
 
 .services-img {
   padding: 80px 0;
@@ -334,6 +347,10 @@ header {
   border: 2px solid white;
   background-color: #697077;
   margin-top: 24px;
+}
+.solution-row button:hover {
+  background-color: #0F172A;
+  transition: 0.4s ease;
 }
 
 .solution-img img {
@@ -447,6 +464,10 @@ header {
   border: 2px solid white;
   background-color: #697077;
 }
+.slider3-text button:hover {
+  background-color: #0F172A;
+  transition: 0.4s ease;
+}
 
 .slick3-card {
   height: 100%;
@@ -491,12 +512,13 @@ header {
   transform: scale(1);
 }
 
-.art {
+.art-section {
   padding: 80px 0;
 }
 
 .art-text {
   padding-bottom: 26px;
+  flex-wrap: wrap;
 }
 .art-text h4 {
   font-size: 40px;
@@ -579,6 +601,10 @@ header {
   background-color: #0F172A;
   margin-top: 24px;
 }
+.join-text button:hover {
+  background-color: #697077;
+  transition: 0.4s ease;
+}
 
 .join-img img {
   max-width: 100%;
@@ -586,14 +612,17 @@ header {
 }
 
 .footer-row {
-  padding: 48px 0;
   color: #697077;
+  padding-top: 63px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #E2E8F0;
 }
 .footer-row li {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   margin-bottom: 0px;
+  padding-bottom: 24px;
 }
 .footer-row li img {
   padding-right: 8px;
@@ -604,6 +633,7 @@ header {
 .footer-bottom {
   padding-top: 48px;
   padding-bottom: 24px;
+  flex-wrap: wrap;
 }
 .footer-bottom span {
   font-size: 16px;
@@ -811,18 +841,18 @@ header {
   .slider3-text button {
     margin-bottom: 53.5px;
   }
-  .art {
-    padding: 48px 0;
+  .art-section {
+    padding-top: 48px;
+    padding-bottom: 0px;
   }
   .art-text {
-    padding-bottom: 26px;
-    flex-wrap: wrap;
+    padding-bottom: 24px;
   }
   .art-text h4 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
+    line-height: 110%;
     margin-bottom: 0px;
-    color: #0F172A;
   }
   .art-text a {
     font-size: 16px;
@@ -831,7 +861,36 @@ header {
     margin-bottom: 0px;
     color: #2563EB;
   }
-  .art-text a img {
-    padding-left: 16px;
+  .art-card-text p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    padding-bottom: 48px;
+  }
+  .join-now {
+    padding-top: 48px;
+  }
+  .join-text {
+    text-align: center;
+  }
+  .join-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 0px;
+  }
+  .join-text button {
+    margin-bottom: 32px;
+  }
+  .footer-row {
+    gap: 32px;
+  }
+  .footer-bottom span {
+    padding-bottom: 24px;
+  }
+  .footer-p {
+    padding-top: 0;
   }
 }/*# sourceMappingURL=main.css.map */

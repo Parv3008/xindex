@@ -25,6 +25,8 @@ header{background-color: $Rose-900;}
 
 .join{border: 2px solid $white !important; border-radius: 5px; padding: 12px 28px !important;}
 
+.join:hover{background-color: $Rose-700; transition: 0.4s ease;}
+
 .offcanvas-body{ul{gap: 16px;}}
 
 .navbar-toggler{border: none !important;}
@@ -40,7 +42,8 @@ header{background-color: $Rose-900;}
 .hero-row{
     h1{@include h1; color: $white;}
     input{width: 515px; border-radius: 5px; padding: 13px 16px 13px 48px; color: $Blue-Gray-600; background-image: url("../assets/search-icon.svg"); background-position: 12px 16px; background-repeat: no-repeat; margin-top: 24px; margin-bottom: 8px;}
-    button{@include mybtn; @include m; padding: 12px 28px;}
+    button{@include mybtn; @include m; padding: 13px 28px;}
+    button:hover{background-color: $Rose-700-hover; transition: 0.4s ease;}
     .search-link{display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 8px;}
     a{border: 1px solid $white; border-radius: 4px; padding: 2px 8px; color: $white; white-space: nowrap; }
 }
@@ -48,7 +51,7 @@ header{background-color: $Rose-900;}
 .left{padding: 129px 0;}
 
 .right-img{
-    img{position: absolute; max-width: 100%; height: auto; right: 0%; top: 20%;}
+    img{position: absolute; max-width: 100%; height: auto; right: 0%; top: 19%;}
 }
 
 .company-logo{padding: 48px 0; background-color: $Blue-Gray-100;}
@@ -101,7 +104,8 @@ header{background-color: $Rose-900;}
     h6{@include s; color: $Blue-Gray-600; margin-bottom: 0;} 
 }
 
-.services{padding: 80px 0; h4{@include h4;} button{@include mybtn; padding: 16px 32px;}}
+.services{padding: 80px 0; h4{@include h4;} button{@include mybtn; padding: 16px 32px;}button:hover{background-color: $Rose-900; transition: 0.4s ease;}
+}
 
 .services-img{
     padding: 80px 0;
@@ -115,7 +119,9 @@ header{background-color: $Rose-900;}
     h2{@include h2; color: $white;}
     p{@include l; color: $white; padding: 24px 0;}
     li{@include l;color: $white; img{padding-right: 8px;}}
-    button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-600; margin-top: 24px;}
+    button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; 
+    border: 2px solid $white; background-color: $Blue-Gray-600; margin-top: 24px;}
+    button:hover{background-color: $Blue-Gray-900; transition: 0.4s ease;}
 }
 
 .solution-img{img{max-width: 100%; height: auto;}}
@@ -187,6 +193,7 @@ header{background-color: $Rose-900;}
     h2{@include h2; color: $white;}
     p{@include l; color: $white; padding: 24px 0;}
     button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-600; }
+    button:hover{background-color: $Blue-Gray-900; transition: 0.4s ease;}
 }
 
 .slick3-card {
@@ -241,10 +248,10 @@ header{background-color: $Rose-900;}
     }
 }
 
-.art{padding: 80px 0;}
+.art-section{padding: 80px 0;}
 
 .art-text{
-    padding-bottom: 26px;
+    padding-bottom: 26px; flex-wrap: wrap;
     h4{@include h4; color: $Blue-Gray-900;}
     a{@include m; color: $Blue-600;
         img{padding-left: 16px;}
@@ -278,6 +285,7 @@ header{background-color: $Rose-900;}
 .join-text{
     h2{@include h2;}
     button{@include l; color: $white; padding: 16px 32px; border-radius: 8px; border: 2px solid $white; background-color: $Blue-Gray-900; margin-top: 24px;}
+    button:hover{background-color: $Blue-Gray-600; transition: 0.4s ease;}
 }
 
 .join-img{
@@ -285,13 +293,13 @@ header{background-color: $Rose-900;}
 }
 
 .footer-row{
-    padding: 48px 0; color: $Blue-Gray-600;
-    li{@include m;
+    color: $Blue-Gray-600; padding-top: 63px; padding-bottom: 60px - 24px; border-bottom: 1px solid $Blue-Gray-200;
+    li{@include m; padding-bottom: 24px;
         img{padding-right: 8px; max-width: 100%; height: auto;}}
 }
 
 .footer-bottom{
-    padding-top: 48px; padding-bottom: 24px;
+    padding-top: 48px; padding-bottom: 24px; flex-wrap: wrap;
     span{@include m;}
     .social-logo{gap: 16px!important;}
 }
@@ -323,7 +331,7 @@ header{background-color: $Rose-900;}
     .art{overflow-x: scroll; gap: 24px;} 
     .slider1{padding: 48px 0;}
     // .slick-list{padding:0% 15% 0% 0% !important;}
-
+    
     .slick1-wrapper{
         .slick-list{padding:0 20% 0 0 !important;}
         width: calc(5% - (50% - 615px));
@@ -364,13 +372,24 @@ header{background-color: $Rose-900;}
     // .slick3-wrapper{
     //     .slick-list{padding:0 15% 0 0 !important;}
     // }
-    .art{padding: 48px 0;}
+    .art-section{padding-top: 48px; padding-bottom: 0px;}
     .art-text{
-        padding-bottom: 26px; flex-wrap: wrap;
-        h4{@include h4; color: $Blue-Gray-900;}
-        a{@include m; color: $Blue-600;
-            img{padding-left: 16px;}
-        }
+        padding-bottom: 24px; 
+        h4{@include h5; }
+        a{@include m; color: $Blue-600;}
     }
-
+    .art-card-text{
+        p{@include m; font-weight: 400; padding-bottom: 48px;}
+    }
+    .join-now{padding-top: 48px;}
+    .join-text{
+        text-align: center;
+        h2{@include h5;}
+        button{margin-bottom: 32px;}
+    }
+    .footer-row{gap: 32px;}
+    .footer-bottom{
+        span{padding-bottom: 24px;}
+    }
+    .footer-p{padding-top: 0;}
 }
