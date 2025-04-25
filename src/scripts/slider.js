@@ -25,6 +25,7 @@ $('.slick1').slick({
                 slidesToShow: 1,
                 // centerMode: true,
                 slidesToScroll: 1
+                
             }
         },
         {
