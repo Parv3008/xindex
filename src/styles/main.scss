@@ -83,8 +83,8 @@ header{background-color: $Rose-900;}
 // .slick-list{padding:0 7% 0 0 !important;}
     
 .slick1-wrapper{
-    .slick-list{padding:0 7% 0 0 !important;}
-    width: calc(100% - (50% - 630px));
+    .slick-list{padding:0 7% 0 0 !important; gap: 24px !important;}
+    width: calc(100vw - (50vw - 630px));
     margin-left: auto;
     .slick-next:before {
         position: absolute;
@@ -92,7 +92,14 @@ header{background-color: $Rose-900;}
         padding: 10px;
         background-color: #ffffff;
         border-radius: 50%;
+        opacity: 1;
     }
+    .slick-prev:before {
+        content: none;
+        
+    }
+    .slick-next {right: 105px; top: 40%;}
+
 }
 
 .slider-card-img{img{border-radius: 10px 10px 0 0;}}
@@ -110,7 +117,7 @@ header{background-color: $Rose-900;}
 .services-img{
     padding: 80px 0;
     flex-wrap: wrap;
-    h3{@include xl; color: $Blue-Gray-900;}
+    h3{@include xl; color: $Blue-Gray-900; padding-top: 16px;}
 }
 
 .Solutions{padding: 80px 0; background-color: $Blue-Gray-600;}
@@ -130,6 +137,7 @@ header{background-color: $Rose-900;}
 
 .slider2-card{
     gap: 80px;
+    padding-right: 48px;
 .video-container {
     position: relative;
     display: inline-block;
@@ -175,15 +183,17 @@ header{background-color: $Rose-900;}
         padding: 12px;
         background-color: #ffffff;
         border-radius: 50%;
-        z-index: 1000;
-        
+        opacity: 1;
     }
+    .slick-prev{z-index: 1000; top: 45%; left: -35px;}
+    .slick-next{z-index: 1000; top: 45%; right: 15px;}
     .slick-next:before{
         position: absolute;
         content: url("../assets/chevron-right.svg") !important;
         padding: 12px;
         background-color: #ffffff;
         border-radius: 50%;
+        opacity: 1;
     }
 }
 
@@ -201,10 +211,9 @@ header{background-color: $Rose-900;}
     background: white;
     border-radius: 10px;
     transition: all 0.3s ease;
-    width: 184px; 
-
+    // width: 184px; 
     &.slick-center {
-        width: 384px !important; 
+        // width: 384px !important; 
     }
 
     .slider3-img {
@@ -222,7 +231,6 @@ header{background-color: $Rose-900;}
         background-color: $white;
         padding: 16px;
         border-radius: 0 0 10px 10px;
-
         span {
             padding-left: 8px;
             color: $Blue-Gray-900;
@@ -232,22 +240,62 @@ header{background-color: $Rose-900;}
 
 .slick3-wrapper {
     .slick-slide {
-        display: inline-block !important;
-        height: auto;
+      opacity: 0.5;
+      height: 100% !important;
+      width: auto !important; // Allow variable width
+      margin: 0 12px; // Space between slides
     }
-    .slick3 {
-        .slick-slide {
-            transition: all 0.3s ease;
-            opacity: 0.5;
-            transform: scale(0.8);
-        }
-        .slick-center {
-            opacity: 1;
-            transform: scale(1);
-        }
+  
+    .slick-center {
+      opacity: 1;
     }
-}
-
+  
+    .slick3-card {
+      width: 184px;
+      height: 100%;
+      background: white;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+  
+      &.slick-center {
+        width: 384px !important;
+      }
+    }
+  
+    .slick-slide img {
+      max-width: 100%;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      position: absolute;
+      padding: 12px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      opacity: 1;
+    }
+  
+    .slick-prev:before {
+      content: url("../assets/chevron-left.svg") !important;
+    }
+  
+    .slick-next:before {
+      content: url("../assets/chevron-right.svg") !important;
+    }
+  
+    .slick-prev {
+      z-index: 1000;
+      top: 40%;
+      left: 65px;
+    }
+  
+    .slick-next {
+      z-index: 1000;
+      top: 40%;
+      right: 100px;
+    }
+  }
+  
 .art-section{padding: 80px 0;}
 
 .art-text{
@@ -264,13 +312,33 @@ header{background-color: $Rose-900;}
     img{max-width: 100%; height: auto; border-radius: 5px;}
   }
   
-  .feature {
+  .Featured {
     @include s;
     position: absolute;
     top: 16px;
     left: 16px;
     background-color: $Purple-100; 
     color: $Purple-800;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .New {
+    @include s;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: $Green-100; 
+    color: $Green-800;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .Coming-Soon {
+    @include s;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: $Yellow-100; 
+    color: $Yellow-800;
     padding: 5px 10px;
     border-radius: 4px;
   }
@@ -331,19 +399,22 @@ header{background-color: $Rose-900;}
     .art{overflow-x: scroll; gap: 24px;} 
     .slider1{padding: 48px 0;}
     // .slick-list{padding:0% 15% 0% 0% !important;}
-    
-    .slick1-wrapper{
-        .slick-list{padding:0 20% 0 0 !important;}
-        width: calc(5% - (50% - 615px));
-        margin-left: auto;
-        .slick-next:before {
-            position: absolute;
-            content: url("../assets/chevron-right.svg") !important;
-            padding: 10px;
-            background-color: #ffffff;
-            border-radius: 50%;
-        }
+
+    // .slick1-wrapper{
+    //     .slick-list{padding:0 20% 0 0 !important;}
+    //     width: calc(100vw - (50vw - 615px));
+    //     margin-left: auto;
+        
+    // }
+
+    .slick1-wrapper {
+        .slick-list{padding:0 15% 0 0 !important;}
+        width: 100%;
+        margin-left: 16px;
+        overflow: hidden;
     }
+    
+    
     .masterpiece-text{
         flex-wrap: wrap;
         h4{@include h5; color: $Blue-Gray-900; padding-bottom: 8px;}

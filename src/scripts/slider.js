@@ -6,7 +6,7 @@ $('.slick1').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    arrows: true,
     responsive: [
         {
             breakpoint: 1024,
@@ -88,13 +88,13 @@ $('.slick3').slick({
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // keep this 1 when using variableWidth
+    slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: true,
     centerMode: true,
     arrows: true,
     autoplay: false,
-    // centerPadding: '10px',
+    centerPadding: '0px',
     responsive: [
         {
             breakpoint: 1024,

@@ -21,10 +21,10 @@ navContainer.innerHTML = navItems
   
 const artData = [
   { img: "src/assets/art1.jpg", category: "Pottery", title: "Vases Family" },
-  { img: "src/assets/art1.jpg", category: "Pottery", title: "Vases Family" },
-  { img: "src/assets/art1.jpg", category: "Pottery", title: "Vases Family" },
-  { img: "src/assets/art1.jpg", category: "Pottery", title: "Vases Family" },
-  { img: "src/assets/art1.jpg", category: "Pottery", title: "Vases Family" },
+  { img: "src/assets/art2.jpg", category: "Oil Painting", title: "Camel Portrait" },
+  { img: "src/assets/art3.jpg", category: "Abstract Painting", title: "Euforia " },
+  { img: "src/assets/art4.jpg", category: "Object Design", title: "Classic Watch" },
+  { img: "src/assets/art5.jpg", category: "Sculpture", title: "White Angel" },
 ];
 
 const container = document.getElementById("art-container");
@@ -49,26 +49,26 @@ const sliderData = [
     author: "by Melvina Spring",
   },
   {
-    img: "src/assets/slider1-img1.jpg",
-    userImg: "src/assets/slider1-user1.jpg",
+    img: "src/assets/slider1-img2.jpg",
+    userImg: "src/assets/slider1-user2.jpg",
+    title: "Flower Decorations",
+    author: "by Melvina Spring",
+  },
+  {
+    img: "src/assets/slider1-img3.jpg",
+    userImg: "src/assets/slider1-user3.jpg",
+    title: "Flower Decorations",
+    author: "by Melvina Spring",
+  },
+  {
+    img: "src/assets/slider1-img4.jpg",
+    userImg: "src/assets/slider1-user4.jpg",
     title: "Flower Decorations",
     author: "by Melvina Spring",
   },
   {
     img: "src/assets/slider1-img1.jpg",
-    userImg: "src/assets/slider1-user1.jpg",
-    title: "Flower Decorations",
-    author: "by Melvina Spring",
-  },
-  {
-    img: "src/assets/slider1-img1.jpg",
-    userImg: "src/assets/slider1-user1.jpg",
-    title: "Flower Decorations",
-    author: "by Melvina Spring",
-  },
-  {
-    img: "src/assets/slider1-img1.jpg",
-    userImg: "src/assets/slider1-user1.jpg",
+    userImg: "src/assets/slider1-user5.jpg",
     title: "Flower Decorations",
     author: "by Melvina Spring",
   },
@@ -103,24 +103,24 @@ const servicesData = [
     title: "Nibh viverra",
   },
   {
-    img: "src/assets/service1.svg",
-    title: "Nibh viverra",
+    img: "src/assets/service2.svg",
+    title: "Cursus amet",
   },
   {
-    img: "src/assets/service1.svg",
-    title: "Nibh viverra",
+    img: "src/assets/service3.svg",
+    title: "Ipsum fermentum",
   },
   {
-    img: "src/assets/service1.svg",
-    title: "Nibh viverra",
+    img: "src/assets/service4.svg",
+    title: "Quisque euismod",
   },
   {
-    img: "src/assets/service1.svg",
-    title: "Nibh viverra",
+    img: "src/assets/service5.svg",
+    title: "Arcu vulputate",
   },
   {
-    img: "src/assets/service1.svg",
-    title: "Nibh viverra",
+    img: "src/assets/service6.svg",
+    title: "Cras auctor",
   },
 ];
 
@@ -161,7 +161,7 @@ const slider2Container = document.getElementById("slider2-container");
 slider2Container.innerHTML = slider2Data
   .map(
     (item) => `
-  <div class="slider2-card d-flex justify-content-between align-items-center">
+  <div class="slider2-card d-flex align-items-center">
     <div class="video-container">
       <video src="${item.videoSrc}" class="custom-video"></video>
       <div class="custom-play-button"></div>
@@ -219,19 +219,22 @@ slider3Container.innerHTML = slider3Data
 const artCardData = [
   {
     img: "src/assets/art1.png",
+    box: "Featured",
     title: "Wild Horse Event",
     description:
       "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
   },
   {
-    img: "src/assets/art1.png",
-    title: "Wild Horse Event",
+    img: "src/assets/art2.png",
+    box: "New",
+    title: "Great Colors",
     description:
       "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
   },
   {
-    img: "src/assets/art1.png",
-    title: "Wild Horse Event",
+    img: "src/assets/art3.png",
+    box: "Coming-Soon",
+    title: "Happy Father’s Day",
     description:
       "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
   },
@@ -245,7 +248,7 @@ artCardsContainer.innerHTML = artCardData
   <div class="col-lg-4 art-card">
     <div class="art-card-img">
       <img src="${item.img}" alt="">
-      <div class="feature">Featured</div>
+      <div class="${item.box}">${item.box}</div>
     </div>
     <div class="art-card-text">
       <h6>${item.title}</h6>
@@ -262,77 +265,71 @@ const footerData = [
     imgSrc: "src/assets/footer1.svg",
     items: [
       "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
+      "User Experience",
+      "Digital Media",
+      "Lifestyle",
+      "Programming",
+      "Animation",
     ],
   },
   {
     category: "Categories",
-    imgSrc: "src/assets/footer1.svg",
+    imgSrc: "src/assets/footer2.svg",
     items: [
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
+      "Pricing",
+      "Overview",
+      "Browse",
+      "Accessibility",
+      "Five",
+      "Changelog",
     ],
   },
   {
     category: "Categories",
-    imgSrc: "src/assets/footer1.svg",
+    imgSrc: "src/assets/footer3.svg",
     items: [
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
+      "Brainstorming",
+      "Ideation",
+      "Wireframing",
+      "Research",
+      "Design",
+      "Concept",
     ],
   },
   {
     category: "Categories",
-    imgSrc: "src/assets/footer1.svg",
+    imgSrc: "src/assets/footer4.svg",
     items: [
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
+      "Help Center",
+      "Blog",
+      "Tutorials",
+      "FAQs",
+      "Community",
+      "Events",
     ],
   },
   {
     category: "Categories",
-    imgSrc: "src/assets/footer1.svg",
+    imgSrc: "src/assets/footer5.svg",
     items: [
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
+      "Contact Us",
+      "Developers",
+      "Documentation",
+      "Integrations",
+      "Reports",
+      "Webinar",
     ],
   },
   {
     category: "Categories",
-    imgSrc: "src/assets/footer1.svg",
+    imgSrc: "src/assets/footer6.svg",
     items: [
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
-      "User Interface",
+      "About",
+      "Press",
+      "Events",
+      "Careers",
+      "Customers",
+      "Partners",
     ],
   },
 ];
