@@ -1,0 +1,51 @@
+@use "../../styles/color" as color;
+@use "../../styles/mixin" as mixin;
+
+.services {
+  padding: 80px 0;
+
+  h4 {
+    @include mixin.h4;
+  }
+
+  button {
+    @include mixin.mybtn;
+    padding: 16px 32px;
+  }
+
+  button:hover {
+    background-color: color.$Rose-900;
+    transition: 0.4s ease;
+  }
+}
+
+.services-img {
+  padding: 80px 0;
+  flex-wrap: wrap;
+
+  h3 {
+    @include mixin.xl;
+    color: color.$Blue-Gray-900;
+    padding-top: 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .services {
+    padding: 48px 0;
+
+    h4 {
+      @include mixin.h4;
+    }
+
+    button {
+      @include mixin.mybtn;
+      padding: 16px 32px;
+    }
+  }
+
+  .services-img {
+    padding: 48px 0;
+    row-gap: 48px;
+  }
+}

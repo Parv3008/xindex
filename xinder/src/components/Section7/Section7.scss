@@ -1,0 +1,115 @@
+@use "../../styles/color" as color;
+@use "../../styles/mixin" as mixin;
+
+.slider2 {
+  padding: 80px 0;
+  background-color: color.$Blue-Gray-100;
+
+  .slider2-card {
+    display: flex;
+    gap: 80px;
+    padding-right: 48px;
+
+    .video-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 576px;
+      max-height: 384px;
+      z-index: 1;
+    }
+
+    .custom-video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .custom-play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 144px;
+      height: 144px;
+      background: url("../../assets/play-icon.svg") no-repeat center center;
+      background-size: contain;
+      cursor: pointer;
+      z-index: 10;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .custom-play-button:hover {
+      opacity: 1;
+    }
+
+    h6 {
+      @include mixin.xl;
+      color: color.$Blue-Gray-600;
+      padding-bottom: 16px;
+    }
+
+    span {
+      color: color.$Blue-600;
+    }
+
+    p {
+      @include mixin.xxl;
+      color: color.$Blue-Gray-900;
+    }
+  }
+}
+
+.slick2-wrapper {
+  position: relative;
+
+  .slick-prev:before {
+    position: absolute;
+    content: url("../../assets/chevron-left.svg") !important;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .slick-prev {
+    z-index: 1000;
+    top: 45%;
+    left: -35px;
+  }
+
+  .slick-next {
+    z-index: 1000;
+    top: 45%;
+    right: 15px;
+  }
+
+  .slick-next:before {
+    position: absolute;
+    content: url("../../assets/chevron-right.svg") !important;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .slider2 {
+    padding: 48px 0;
+  }
+
+  .slider2-card {
+    flex-direction: column;
+    gap: 0px;
+
+    h6 {
+      padding-top: 32px;
+    }
+
+    p {
+      @include mixin.m;
+      font-weight: 400;
+    }
+  }
+}

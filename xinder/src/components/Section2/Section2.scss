@@ -1,0 +1,28 @@
+@use "../../styles/color" as color;
+@use "../../styles/mixin" as mixin;
+
+.company-logo {
+  padding: 48px 0;
+  background-color: color.$Blue-Gray-100;
+}
+
+.logo-img {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+.logo-img img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .logo-img {
+    gap: 32px;
+  }
+  .company-logo {
+    padding-bottom: 48px;
+  }
+}

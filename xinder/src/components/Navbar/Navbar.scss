@@ -1,0 +1,67 @@
+@use "../../styles/color" as color;
+@use "../../styles/mixin" as mixin;
+
+header {
+  background-color: color.$Rose-900; 
+}
+
+.navbar {
+  padding: 24px 0 !important;
+}
+
+.logo {
+  @include mixin.h5;  
+  color: color.$white;  
+}
+
+.nav-link {
+  @include mixin.m;  
+  color: color.$white !important;  
+}
+
+.join {
+  border: 2px solid color.$white !important; 
+  border-radius: 5px;
+  padding: 12px 28px !important;
+}
+
+.join:hover {
+  background-color: color.$Rose-700; 
+  transition: 0.4s ease;
+}
+
+.offcanvas-body {
+  ul {
+    gap: 16px;
+  }
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../../assets/menu.svg") !important;
+}
+
+.navbar-toggler:hover {
+  background-color: color.$white;  
+  transition: 0.4s ease;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav-link {
+    @include mixin.m;
+    color: black !important;  
+  }
+  
+  .join {
+    border: 2px solid black !important;  
+    border-radius: 5px;
+    padding: 12px 28px !important;
+  }
+}

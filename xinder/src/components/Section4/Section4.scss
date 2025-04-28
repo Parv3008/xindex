@@ -1,0 +1,104 @@
+@use "../../styles/color" as color;
+@use "../../styles/mixin" as mixin;
+
+.slider1 {
+  padding: 80px 0;
+  background-color: color.$Blue-Gray-100;
+
+  .masterpiece-text {
+    padding-bottom: 24px;
+
+    h4 {
+      @include mixin.h4;  // Use namespace for the mixin
+      color: color.$Blue-Gray-900;  // Use namespace for the color variable
+    }
+
+    a {
+      @include mixin.m;  // Use namespace for the mixin
+      color: color.$Blue-600;  // Use namespace for the color variable
+      padding-right: 16px;
+    }
+  }
+
+  .slick1-wrapper {
+    .slick-list {
+      padding: 0 7% 0 0 !important;
+      gap: 24px !important;
+    }
+
+    width: calc(100vw - (50vw - 630px));
+    margin-left: auto;
+
+    .slick-next:before {
+      position: absolute;
+      content: url("../../assets/chevron-right.svg") !important;
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      opacity: 1;
+    }
+
+    .slick-prev:before {
+      content: none;
+    }
+
+    .slick-next {
+      right: 105px;
+      top: 40%;
+    }
+  }
+
+  .slider-card-img {
+    img {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  .slider-card-text {
+    width: 300px;
+    padding: 16px;
+    background-color: color.$white;  // Use namespace for the color variable
+    border-radius: 0 0 10px 10px;
+
+    img {
+      padding-right: 8px;
+    }
+
+    h5 {
+      @include mixin.m;  // Use namespace for the mixin
+      color: color.$Blue-Gray-900;  // Use namespace for the color variable
+      margin-bottom: 0;
+    }
+
+    h6 {
+      @include mixin.s;  // Use namespace for the mixin
+      color: color.$Blue-Gray-600;  // Use namespace for the color variable
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .slider1 {
+    padding: 48px 0;
+  }
+
+  .slick1-wrapper {
+    .slick-list {
+      padding: 0 15% 0 0 !important;
+      margin-left: 16px;
+    }
+
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .masterpiece-text {
+    flex-wrap: wrap;
+
+    h4 {
+      @include mixin.h5;  // Use namespace for the mixin
+      color: color.$Blue-Gray-900;  // Use namespace for the color variable
+    }
+}
+}

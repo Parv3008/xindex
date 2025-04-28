@@ -211,10 +211,7 @@ header{background-color: $Rose-900;}
     background: white;
     border-radius: 10px;
     transition: all 0.3s ease;
-    // width: 184px; 
-    &.slick-center {
-        // width: 384px !important; 
-    }
+    
 
     .slider3-img {
         img {
@@ -392,7 +389,7 @@ header{background-color: $Rose-900;}
         img{position: static; max-width: 100%; height: auto;    }
     }
     .logo-img {gap: 32px;}
-    .company-logo{padding-bottom: 48px - 24px;}
+    .company-logo{padding-bottom: 48px;}
     .Feature-art{padding: 48px 0;}
     .feature-text{
         padding-bottom: 32px;

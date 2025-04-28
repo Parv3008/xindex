@@ -1,0 +1,68 @@
+@use "../../styles/color" as color;
+@use "../../styles/mixin" as mixin;
+
+.Feature-art {
+  padding: 80px 0;
+
+  .feature-text {
+    padding-bottom: 26px;
+
+    h4 {
+      @include mixin.h4;  
+      color: color.$Blue-Gray-900;  
+    }
+
+    a {
+      @include mixin.m;  
+      color: color.$Blue-600; 
+      padding-right: 16px;
+    }
+  }
+
+  .art-img {
+    position: relative;
+
+    span {
+      @include mixin.m;  
+      color: color.$white;  
+      position: absolute;
+      top: 24px;
+      left: 24px;
+    }
+
+    h6 {
+      @include mixin.h6;  
+      color: color.$white;  
+      position: absolute;
+      top: 46px;
+      left: 24px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .Feature-art {
+    padding: 48px 0;
+  }
+
+  .feature-text {
+    padding-bottom: 32px;
+    flex-wrap: wrap;
+
+    h4 {
+      @include mixin.h5;  
+      color: color.$Blue-Gray-900;  
+      padding-bottom: 8px;
+    }
+
+    a {
+      @include mixin.m;  
+      color: color.$Blue-600; 
+    }
+  }
+
+  .art {
+    overflow-x: scroll;
+    gap: 24px;
+  }
+}
