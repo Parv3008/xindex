@@ -1,5 +1,6 @@
 import React from "react";
 import "./Section6.scss";
+import Explore from "../ui/Button/Explore";
 
 const Section6 = () => {
   return (
@@ -26,7 +27,8 @@ const Section6 = () => {
                 Vitae odio a id purus in.
               </li>
             </ul>
-            <button>Explore Xinder</button>
+            {/* <button>Explore Xinder</button> */}
+            <Explore/>
           </div>
           <div className="col-lg-6 col-sm-12 solution-img">
             <img src="src/assets/Col.png" alt="" />

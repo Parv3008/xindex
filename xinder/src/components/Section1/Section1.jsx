@@ -1,6 +1,8 @@
 import React from "react";
 import "./Section1.scss";
 import heroImg from "../../assets/hero-img.png";
+import Button from "../ui/Button/Button";
+
 
 const Section1 = () => {
   return (
@@ -17,7 +19,8 @@ const Section1 = () => {
                   type="text"
                   placeholder="search for artists, work name, or category"
                 />
-                <button type="submit">Search</button>
+                {/* <button type="submit">Search</button> */}
+                <Button/>
               </form>
             </div>
             <div className="search-link">

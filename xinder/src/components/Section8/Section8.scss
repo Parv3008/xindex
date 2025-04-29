@@ -1,0 +1,163 @@
+@use '../../styles/color' as color;
+@use '../../styles/mixin' as mixin;
+
+.slider3 {
+  padding: 80px 0;
+  background-color: color.$Blue-Gray-600;
+
+  &-text {
+    h2 {
+      @include mixin.h2;
+      color: color.$white;
+    }
+
+    p {
+      @include mixin.l;
+      color: color.$white;
+      padding: 24px 0;
+    }
+
+    button {
+      @include mixin.l;
+      color: color.$white;
+      padding: 16px 32px;
+      border-radius: 8px;
+      border: 2px solid color.$white;
+      background-color: color.$Blue-Gray-600;
+      cursor: pointer;
+      transition: 0.4s ease;
+
+      &:hover {
+        background-color: color.$Blue-Gray-900;
+        color: color.$white;
+      }
+    }
+  }
+}
+
+.slick3-card {
+  height: 100%;
+  background: color.$white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+
+  .slider3-img {
+    img {
+      border-radius: 10px 10px 0 0;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .slick3-text {
+    display: flex;
+    align-items: center;
+    background-color: color.$white;
+    padding: 16px;
+    border-radius: 0 0 10px 10px;
+
+    span {
+      padding-left: 8px;
+      color: color.$Blue-Gray-900;
+    }
+  }
+}
+
+.slick3-wrapper {
+  .slick3 {
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-slide {
+    height: 100% !important;
+    margin: 0 12px;
+    opacity: 0.5;
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .slick-center {
+    opacity: 1;
+  }
+
+  .slick3-card {
+    width: 184px;
+    transition: all 0.3s ease;
+  }
+
+  .slick-slide.slick-center .slick3-card {
+    width: 384px !important;
+  }
+
+  .slick-slide img {
+    max-width: 100%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    position: absolute;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .slick-prev:before {
+    content: url("../../assets/chevron-left.svg") !important;
+  }
+
+  .slick-next:before {
+    content: url("../../assets/chevron-right.svg") !important;
+  }
+
+  .slick-prev {
+    z-index: 1000;
+    top: 40%;
+    left: 65px;
+  }
+
+  .slick-next {
+    z-index: 1000;
+    top: 40%;
+    right: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider3 {
+    padding: 48px 0;
+
+    &-text {
+      h2 {
+        @include mixin.h5;
+      }
+
+      p {
+        @include mixin.m;
+        padding: 16px 0;
+        font-weight: 400;
+      }
+
+      button {
+        margin-bottom: 53.5px;
+      }
+    }
+  }
+
+  .slick3-wrapper {
+    .slick3-card {
+      width: 140px;
+    }
+
+    .slick-slide.slick-center .slick3-card {
+      width: 280px !important;
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: none;
+    }
+  }
+}

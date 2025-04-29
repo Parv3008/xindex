@@ -9,13 +9,13 @@
     padding-bottom: 24px;
 
     h4 {
-      @include mixin.h4;  // Use namespace for the mixin
-      color: color.$Blue-Gray-900;  // Use namespace for the color variable
+      @include mixin.h4; 
+      color: color.$Blue-Gray-900;  
     }
 
     a {
-      @include mixin.m;  // Use namespace for the mixin
-      color: color.$Blue-600;  // Use namespace for the color variable
+      @include mixin.m;  
+      color: color.$Blue-600; 
       padding-right: 16px;
     }
   }
@@ -57,7 +57,7 @@
   .slider-card-text {
     width: 300px;
     padding: 16px;
-    background-color: color.$white;  // Use namespace for the color variable
+    background-color: color.$white;  
     border-radius: 0 0 10px 10px;
 
     img {
@@ -65,14 +65,14 @@
     }
 
     h5 {
-      @include mixin.m;  // Use namespace for the mixin
-      color: color.$Blue-Gray-900;  // Use namespace for the color variable
+      @include mixin.m; 
+      color: color.$Blue-Gray-900;  
       margin-bottom: 0;
     }
 
     h6 {
-      @include mixin.s;  // Use namespace for the mixin
-      color: color.$Blue-Gray-600;  // Use namespace for the color variable
+      @include mixin.s; 
+      color: color.$Blue-Gray-600;  
       margin-bottom: 0;
     }
   }
@@ -97,8 +97,8 @@
     flex-wrap: wrap;
 
     h4 {
-      @include mixin.h5;  // Use namespace for the mixin
-      color: color.$Blue-Gray-900;  // Use namespace for the color variable
+      @include mixin.h5;  
+      color: color.$Blue-Gray-900;
     }
 }
 }

@@ -1,0 +1,56 @@
+@use '../../styles/color' as color;
+@use '../../styles/mixin' as mixin;
+
+.footer-row {
+  color: color.$Blue-Gray-600;
+  padding-top: 63px;
+  padding-bottom: calc(60px - 24px);
+  border-bottom: 1px solid color.$Blue-Gray-200;
+
+  li {
+    @include mixin.m;
+    padding-bottom: 24px;
+
+    img {
+      padding-right: 8px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+
+  span {
+    @include mixin.m;
+  }
+
+  .social-logo {
+    gap: 16px !important;
+  }
+}
+
+.footer-p {
+  @include mixin.xs;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer-row {
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    span {
+      padding-bottom: 24px;
+    }
+  }
+
+  .footer-p {
+    padding-top: 0;
+  }
+}

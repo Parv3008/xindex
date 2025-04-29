@@ -1,0 +1,58 @@
+@use '../../styles/color' as color;
+@use '../../styles/mixin' as mixin;  
+
+.join-now {
+  padding-top: 80px;
+  background-color: color.$Blue-Gray-900;
+  color: color.$white;
+
+  .join-text {
+    h2 {
+      @include mixin.h4;  
+    }
+
+    button {
+      @include mixin.l;  
+      color: color.$white;
+      padding: 16px 32px;
+      border-radius: 8px;
+      border: 2px solid color.$white;
+      background-color: color.$Blue-Gray-900;
+      margin-top: 24px;
+      transition: background-color 0.4s ease;
+
+      &:hover {
+        background-color: color.$Blue-Gray-600;
+      }
+    }
+  }
+
+  .join-img {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .join-now {
+    padding-top: 48px;
+  }
+
+  .join-text {
+    text-align: center;
+
+    h2 {
+      @include mixin.h5;
+    }
+
+    button {
+      margin-bottom: 32px;
+    }
+  }
+
+  .join-img {
+    display: none;
+  }
+}

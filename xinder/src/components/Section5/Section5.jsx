@@ -1,5 +1,6 @@
 import React from "react";
 import "./Section5.scss";  
+import Services from "../ui/Button/Services";
 
 const servicesData = [
   {
@@ -41,7 +42,8 @@ const Section5 = () => {
             </div>
           ))}
         </div>
-        <button>Find Services</button>
+        {/* <button>Find Services</button> */}
+        <Services/>
       </div>
     </section>
   );

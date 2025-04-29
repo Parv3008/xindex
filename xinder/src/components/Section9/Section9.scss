@@ -1,0 +1,111 @@
+@use '../../styles/color' as color;
+@use '../../styles/mixin' as mixin;
+
+.art-section {
+  padding: 80px 0;
+}
+
+.art-text {
+  padding-bottom: 26px;
+  flex-wrap: wrap;
+
+  h4 {
+    @include mixin.h4;
+    color: color.$Blue-Gray-900;
+  }
+
+  a {
+    @include mixin.m;
+    color: color.$Blue-600;
+
+    img {
+      padding-left: 16px;
+    }
+  }
+}
+
+.art-card-img {
+  position: relative;
+  display: inline-block;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+.Featured {
+  @include mixin.s;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: color.$Purple-100;
+  color: color.$Purple-800;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.New {
+  @include mixin.s;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: color.$Green-100;
+  color: color.$Green-800;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.Coming-Soon {
+  @include mixin.s;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: color.$Yellow-100;
+  color: color.$Yellow-800;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.art-card-text {
+  h6 {
+    @include mixin.h6;
+    color: color.$Blue-Gray-900;
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  p {
+    @include mixin.l;
+    color: color.$Blue-Gray-900;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .art-section {
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .art-text {
+    padding-bottom: 24px;
+
+    h4 {
+      @include mixin.h5;
+    }
+
+    a {
+      @include mixin.m;
+      color: color.$Blue-600;
+    }
+  }
+
+  .art-card-text {
+    p {
+      @include mixin.m;
+      font-weight: 400;
+      padding-bottom: 48px;
+    }
+  }
+}
